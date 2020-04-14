@@ -19,7 +19,7 @@ import (
   "log"
 
   iq "github.com/rekki/go-query"
-  "github.com/rekki/go-query-index/analyzer"
+  analyzer "github.com/rekki/go-query-analyze"
   "github.com/rekki/go-query-index"
 )
 
@@ -107,7 +107,7 @@ Example:
 
 ```go
 package main
-import n "github.com/rekki/go-query-normalize"
+import n "github.com/rekki/go-query-analyze/normalize"
 
 func main() {
   normalize := []n.Normalizer{
@@ -132,7 +132,7 @@ Example:
 ```go
 package main
 
-import t "github.com/rekki/go-query-tokenize"
+import t "github.com/rekki/go-query-analyze/tokenize"
 
 func main() {
   tokenizer := []t.Tokenizer{
