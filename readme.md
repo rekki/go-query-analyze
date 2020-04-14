@@ -1,10 +1,14 @@
-# go-query-analyze [![GitHub Actions Status](https://github.com/rekki/go-query-analyze/workflows/test/badge.svg?branch=master)](https://github.com/rekki/go-query-analyze/actions) [![codecov](https://codecov.io/gh/rekki/go-query-analyze/branch/master/graph/badge.svg)](https://codecov.io/gh/rekki/go-query-analyze) [![GoDoc](https://godoc.org/github.com/rekki/go-query-analyze?status.svg)](https://godoc.org/github.com/rekki/go-query-analyze)
+# go-query-analyze [![GitHub Actions Status](https://github.com/rekki/go-query-analyze/workflows/test/badge.svg?branch=master)](https://github.com/rekki/go-query-analyze/actions) [![codecov](https://codecov.io/gh/rekki/go-query-analyze/branch/master/graph/badge.svg)](https://codecov.io/gh/rekki/go-query-analyze)
 
-> analyzer for go-query: search index, normalizers, tokenizers
+> analyzer for [go-query](https://github.com/rekki/go-query): search index, normalizers, tokenizers
 
-## Search index
+- [Search Index](https://github.com/rekki/go-query-analyze#search-index)
+- [Normalize](https://github.com/rekki/go-query-analyze#normalize)
+- [Tokenize](https://github.com/rekki/go-query-analyze#tokenize)
 
-> Search index for `go-query`
+## Search Index
+
+> Search index for `go-query` [![GoDoc](https://godoc.org/github.com/rekki/go-query-analyze?status.svg)](https://godoc.org/github.com/rekki/go-query-analyze)
 
 Illustration of how you can use search index to build a somewhat functional search index for `go-query`:
 
@@ -95,7 +99,7 @@ will print
 2019/12/03 18:40:11 &{Sofia BG} matching with score 0.035835
 ```
 
-## Normalize
+## Normalize [![GoDoc](https://godoc.org/github.com/rekki/go-query-analyze/normalize?status.svg)](https://godoc.org/github.com/rekki/go-query-analyze/normalize)
 
 > Simlpe normalize chain
 
@@ -119,7 +123,7 @@ func main() {
 }
 ```
 
-## Tokenize
+## Tokenize [![GoDoc](https://godoc.org/github.com/rekki/go-query-analyze/tokenize?status.svg)](https://godoc.org/github.com/rekki/go-query-analyze/tokenize)
 
 > Simlpe tokenize chain
 
