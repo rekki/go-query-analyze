@@ -21,8 +21,8 @@ func testMany(t *testing.T, cases []TestCase) {
 func TestSpaceBetweenDigits(t *testing.T) {
 	cases := []TestCase{
 		{
-			in:  "c 1b",
-			out: "c 1 b",
+			in:  "c 111b 2c 22",
+			out: "c 111 b 2 c 22",
 			n:   []Normalizer{NewSpaceBetweenDigits()},
 		},
 
@@ -116,24 +116,36 @@ func TestPorter(t *testing.T) {
 	cases := []TestCase{
 		{
 			in:  "dogs hello cats",
-			out: "dog hel cat",
-			n:   []Normalizer{NewPorterStemmer()},
+			out: "dog hello cat ",
+			n:   []Normalizer{NewPorterStemmer(0)},
 		},
 		{
 			in:  "dogs",
-			out: "dog",
-			n:   []Normalizer{NewPorterStemmer()},
+			out: "dog ",
+			n:   []Normalizer{NewPorterStemmer(0)},
 		},
 		{
 			in:  "dogs   ",
-			out: "dog",
-			n:   []Normalizer{NewPorterStemmer()},
+			out: "dog ",
+			n:   []Normalizer{NewPorterStemmer(0)},
+		},
+
+		{
+			in:  "cats dogs onions",
+			out: "cats dogs onion ",
+			n:   []Normalizer{NewPorterStemmer(5)},
+		},
+
+		{
+			in:  "cats dogs scallion onions       ",
+			out: "cats dogs scallion onion ",
+			n:   []Normalizer{NewPorterStemmer(5)},
 		},
 
 		{
 			in:  "",
 			out: "",
-			n:   []Normalizer{NewPorterStemmer()},
+			n:   []Normalizer{NewPorterStemmer(0)},
 		},
 	}
 	testMany(t, cases)
